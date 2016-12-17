@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transmigration</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/bungo.css" />
+	<script src="js/sortable.js"></script>
+	<script src="js/bungo-list.js"></script>
+	<script src="js/bungo-logs-show.js"></script>
+</head>
+<body>
+	<nav class="content">
+		<a href="logs.html">Logs</a>
+		<a href="submit.html">Submit</a>
+	</nav>
+	<form class="content">
+		<datalist id="writers"></datalist>
+		<div class="set">
+			<select class="writers" name="result">
+				<option selected="true" disabled="disabled" value="">Transmigrated Writer</option>
+			</select>
+		</div>
+		<div class="set">
+			<label><input type="radio" name="ink" value="50"><span>50</span></label>
+			<label><input type="radio" name="ink" value="100"><span>100</span></label>
+			<label><input type="radio" name="ink" value="400"><span>400</span></label>
+			<label><input type="radio" name="ink" value="1500"><span>1500</span></label>
+			<label><input type="radio" name="ink" value="4000"><span>4000</span></label>
+		</div>
+		<div class="set">
+			<label><input type="radio" name="bookmark" value="None"><span>None</span></label>
+			<label><input type="radio" name="bookmark" value="Bronze"><span>Bronze</span></label>
+			<label><input type="radio" name="bookmark" value="Silver"><span>Silver</span></label>
+			<label><input type="radio" name="bookmark" value="Gold"><span>Gold</span></label>
+		</div>
+		<div class="set">
+			<select class="writers" name="assistant">
+				<option selected="true" disabled="disabled" value="">Assistant</option>
+			</select>
+			<select class="writers" name="delver">
+				<option selected="true" disabled="disabled" value="">Delver</option>
+			</select>
+		</div>
+		<div class="set buttons">
+			<button type="reset">Clear</button>
+			<button type="button" id="search">Search</button>
+		</div>
+	</form>
+	<div class="content"><span id="count">0</span> total entries</div>
+	<main class="content">
+		<div class="data-table"><table>
+			<thead>
+				<th class="nocase">Writer</th>
+				<th class="num">Ink</th>
+				<th class="nocase">BM</th>
+				<th class="nocase">Assistant</th>
+				<th class="nocase">Delver</th>
+			</thead>
+			<tbody>
+			</tbody>
+		</table></div>
+	</main>
+</body>
+</html>

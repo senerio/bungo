@@ -1,0 +1,106 @@
+/* Palette
+ * #FFFAF1 rgb(255,250,241)
+ * #DFDBC3 rgb(223,219,195)
+ * #D6BDAB rgb(214,189,171)
+ * #F5E3D8 rgb(245,227,216)
+ * #EFD7C5 rgb(239,215,197)
+ * #7A4621 rgb(122,70,33)
+ */
+
+* {
+    box-sizing: border-box; font-family: serif; font-size: large;
+}
+body {
+    background-color: rgba(232,209,165,0.5);
+    background-image: url('../img/bgl.png'), url('../img/bgr.png'), url('../img/bgt.png'), linear-gradient(to bottom, rgba(232,209,165,1) 0%,rgba(255,255,255,1) 100%);
+    background-position: bottom left, top right, top left, top left;
+    background-attachment: fixed, fixed, scroll, fixed;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+}
+.content {
+    background-color: rgba(255,250,241,0.7); padding: 5px; margin: 10px auto;
+    text-align: center;
+}
+nav > a {
+    text-decoration: none; color: #000; padding: 0 30px; text-transform: uppercase;
+    font-family:monospace; display: inline-block;
+}
+nav > a:hover {
+    text-shadow: 2px 2px 1px #D6BDAB;
+}
+nav > a::first-letter {
+    font-size: x-large;
+}
+
+/* input */
+
+input[type=radio] { display: none; }
+input[type=radio] + span { text-align: center;}
+button, button:focus, select,
+input, input[type=radio] + span {
+    background-color: #FFFAF1; color: #7A4621; padding: 0px 5px;
+    border: 2px solid #F5E3D8; border-radius: 8px;
+}
+button,
+input:focus, input:active, input[type=radio]:checked + span {
+    background-color: #7A4621; color: #FFFAF1; padding: 0px 5px;
+    box-shadow: 2px 2px 1px #F5E3D8 inset;
+}
+select {
+    width: 100%;
+}
+.buttons button {
+    box-shadow: none; border-radius: 0; text-align: center;
+}
+.set {
+    display: flex; white-space: nowrap; overflow-x: scroll;
+}
+.set > * {
+    display: flex; flex-grow: 1; justify-content: center;
+}
+.set input[type=radio]+span {
+    width: 100%;
+}
+
+/* output */
+
+table {
+	width: 100%; border-collapse: separate; border-spacing: 0;
+    text-align: left; white-space: nowrap;
+}
+th {
+	padding: 0.5em 0 0.1em 0; border-bottom: 1px solid #7A4621;
+}
+th a {
+	text-decoration: none; color: #7A4621;
+}
+td {
+	border-bottom: 1px solid #d6bdab; padding: 0.3em;
+    font-size: smaller;
+}
+td:first-child {
+	font-weight: bold;
+}
+tbody tr:nth-child(2n+1) {
+	background-color: rgba(122,70,33,0.1);
+}
+.data-table {
+    overflow-x: scroll;
+}
+
+#alert {
+    text-align: center; font-size: x-large;
+    color: rgba(122,70,33,0.4); display: none;
+}
+
+@media only screen and (min-width: 700px) {
+    .content { width: 70%; }
+}
+@media only screen and (max-width: 699px) {
+    .content { width: 100%; }
+}
+@media only screen and (max-width: 400px) {
+    .set:nth-of-type(1),.set:nth-of-type(4) {
+        display: block;
+    }
+}
