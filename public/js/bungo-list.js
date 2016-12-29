@@ -28,6 +28,7 @@ var writers = {
 "36":"Takamura Koutarou",
 "37":"Ishikawa Takuboku",
 "38":"Kunikida Doppo",
+"39":"Kouda Rohan",
 "41":"Yoshikawa Eiji",
 "45":"Nakano Shigeharu",
 "52":"Kikuchi Kan",
