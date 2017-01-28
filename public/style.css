@@ -12,13 +12,13 @@
 }
 body {
     background-color: rgba(232,209,165,0.5);
-    background-image: url('../img/bgl.png'), url('../img/bgr.png'), url('../img/bgt.png'), linear-gradient(to bottom, rgba(232,209,165,1) 0%,rgba(255,255,255,1) 100%);
+    background-image: url('bgl.png'), url('bgr.png'), url('bgt.png'), linear-gradient(to bottom, rgba(232,209,165,1) 0%,rgba(255,255,255,1) 100%);
     background-position: bottom left, top right, top left, top left;
     background-attachment: fixed, fixed, scroll, fixed;
     background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 }
-.content {
-    background-color: rgba(255,250,241,0.7); padding: 5px; margin: 10px auto;
+body > * {
+    background-color: rgba(255,250,241,0.85); padding: 5px; margin: 10px auto;
     text-align: center;
 }
 nav > a {
@@ -30,6 +30,15 @@ nav > a:hover {
 }
 nav > a::first-letter {
     font-size: x-large;
+}
+a {
+    color: rgba(122,70,33,0.9); text-decoration: none;
+}
+@media only screen and (min-width: 700px) {
+    body > * { width: 70%; }
+}
+@media only screen and (max-width: 699px) {
+    body > * { width: 100%; }
 }
 
 /* input */
@@ -61,6 +70,11 @@ select {
 .set input[type=radio]+span {
     width: 100%;
 }
+@media only screen and (max-width: 400px) {
+    .set:nth-of-type(1),.set:nth-of-type(4) {
+        display: block;
+    }
+}
 
 /* output */
 
@@ -84,23 +98,11 @@ td:first-child {
 tbody tr:nth-child(2n+1) {
 	background-color: rgba(122,70,33,0.1);
 }
-.data-table {
+.container {
     overflow-x: scroll;
 }
 
 #alert {
-    text-align: center; font-size: x-large;
-    color: rgba(122,70,33,0.4); display: none;
-}
-
-@media only screen and (min-width: 700px) {
-    .content { width: 70%; }
-}
-@media only screen and (max-width: 699px) {
-    .content { width: 100%; }
-}
-@media only screen and (max-width: 400px) {
-    .set:nth-of-type(1),.set:nth-of-type(4) {
-        display: block;
-    }
+    text-align: center; font-size: x-large; color: rgba(122,70,33,0.7);
+    display: none;
 }

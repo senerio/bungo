@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Transmigration</title>
+	<title>Transmigration Logs</title>
 	<meta name="viewport" content="initial-scale=1,maximum-scale=1" />
-	<link rel="stylesheet" type="text/css" href="css/bungo.css" />
-	<script src="js/bungo-list.js"></script>
-    <script src="js/bungo-logs-submit.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="writers.js"></script>
+	<script src="logs.js"></script>
 </head>
 <body>
-	<nav class="content">
+	<nav>
 		<a href="logs.html">Logs</a>
 		<a href="submit.html">Submit</a>
 	</nav>
-    <form class="content">
+    <form>
 		<datalist id="writers"></datalist>
 		<div class="set">
 			<select class="writers" name="result">
@@ -45,6 +45,6 @@
 			<button type="button" id="submit">Submit</button>
 		</div>
 	</form>
-    <div class="content" id="alert"></div>
+    <div id="alert"></div>
 </body>
 </html>

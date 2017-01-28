@@ -24,7 +24,4 @@ s.post("/submit", function(req, res, body) {
 		res.text("Saved");
 	});
 });
-s.get("/", function(req, res) {
-	res.html("OK");
-});
 s.listen(8080);

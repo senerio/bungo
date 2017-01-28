@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Transmigration</title>
+	<title>Transmigration Logs</title>
 	<meta name="viewport" content="initial-scale=1,maximum-scale=1" />
-	<link rel="stylesheet" type="text/css" href="css/bungo.css" />
-	<script src="js/sortable.js"></script>
-	<script src="js/bungo-list.js"></script>
-	<script src="js/bungo-logs-show.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="writers.js"></script>
+	<script src="logs.js"></script>
+	<script src="sortable.js"></script>
 </head>
 <body>
-	<nav class="content">
+	<nav>
 		<a href="logs.html">Logs</a>
 		<a href="submit.html">Submit</a>
 	</nav>
-	<form class="content">
+	<form>
 		<datalist id="writers"></datalist>
 		<div class="set">
 			<select class="writers" name="result">
@@ -46,9 +46,9 @@
 			<button type="button" id="search">Search</button>
 		</div>
 	</form>
-	<div class="content"><span id="count">0</span> total entries</div>
-	<main class="content">
-		<div class="data-table"><table>
+	<div><span id="count">0</span> total entries</div>
+	<main>
+		<div class="container"><table>
 			<thead>
 				<th class="nocase">Writer</th>
 				<th class="num">Ink</th>
