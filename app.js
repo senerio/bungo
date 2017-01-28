@@ -24,4 +24,4 @@ s.post("/submit", function(req, res, body) {
 		res.text("Saved");
 	});
 });
-s.listen(8080);
+s.listen(process.env.PORT || 8080);
