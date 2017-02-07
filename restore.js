@@ -1,8 +1,7 @@
-var Datastore = require('nedb');
-var db = new Datastore( { filename: './data.db', autoload: true} );
+var db = require('mongojs')(process.env.MONGODB_URI, ['transmigration']);
 var json = JSON.parse(require('fs').readFileSync(process.argv[2]));
-db.remove({}, { multi: true }, function(err, numRemoved) {
-	db.insert(json, function(err, docs) {
+db.transmigration.remove({}, { multi: true }, function(err, numRemoved) {
+	db.transmigration.insert(json, function(err, docs) {
 		console.log('Done.');
 	});
 });
