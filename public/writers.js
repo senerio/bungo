@@ -16,6 +16,7 @@ var writers = {
 "16":"Muroo Saisei",
 "19":"Mushanokouji Saneatsu",
 "20":"Ozaki Kouyou",
+"21":"Sakaguchi Ango",
 "22":"Edogawa Ranpo",
 "26":"Satou Haruo",
 "27":"Kobayashi Takiji",
